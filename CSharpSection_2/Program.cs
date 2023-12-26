@@ -1,4 +1,5 @@
 ﻿using System;
+using CSharpSection_2.Classes;
 
 namespace CSharpSection_2
 {
@@ -7,6 +8,13 @@ namespace CSharpSection_2
         static void Main(string[] args)
         {
             Console.WriteLine(SimpleMath.Division(432.23f, 5423.2f));
+            BankAccount bankAccount1 = new BankAccount(124321.32f, "Jane Doe");
+
+            BankAccount bankAccount2 = new BankAccount(1321.32f, "John Doe");
+
+            Console.WriteLine(bankAccount1.AddBalance(100f));
+            Console.WriteLine(bankAccount2.AddBalance(100f));
+
             Console.ReadKey();
         }
     }
