@@ -7,8 +7,6 @@ namespace CSharpSection
         static int n1 = 432, n2 = 543;
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             int addResult = Add();
             Console.WriteLine($"addResult: {addResult}");
             int substractResult = Substract();
