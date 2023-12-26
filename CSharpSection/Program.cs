@@ -4,37 +4,37 @@ namespace CSharpSection
 {
     class Program
     {
-        static int n1 = 432, n2 = 543;
+        static float n1 = 432, n2 = 543;
         private static void Main(string[] args)
         {
-            int addResult = Add();
+            float addResult = Add();
             Console.WriteLine($"addResult: {addResult}");
-            int substractResult = Substract();
+            float substractResult = Substract();
             Console.WriteLine($"substractResult: {substractResult}");
-            double multiplyResult = Multiply();
+            float multiplyResult = Multiply();
             Console.WriteLine($"multiplyResult: {multiplyResult}");
             float divideResult = Divide();
             Console.WriteLine($"divideResult: {divideResult}");
             Console.ReadKey();
         }
 
-        private static int Add()
+        private static float Add()
         {
-            int result;
+            float result;
             result = n1 + n2;
 
             return result;
         }
-        private static int Substract()
+        private static float Substract()
         {
-            int result;
+            float result;
             result = n2 - n1;
 
             return result;
         }
-        private static double Multiply()
+        private static float Multiply()
         {
-            int result;
+            float result;
             result = n1 * n2;
 
             return result;
@@ -42,7 +42,7 @@ namespace CSharpSection
         private static float Divide()
         {
             
-            float result = (float)n2 / (float)n1;
+            float result = n2 / n1;
 
             return result;
         }
