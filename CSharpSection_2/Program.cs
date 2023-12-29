@@ -8,21 +8,28 @@ namespace CSharpSection_2
         static IOperations am;
         static void Main(string[] args)
         {
-            Console.WriteLine(SimpleMath.Division(432.23f, 5423.2f));
+            /*Console.WriteLine(SimpleMath.Division(432.23f, 5423.2f));
 
             am = new AdvanceMath();
             Console.WriteLine(am.Reminder(7 ,3));
 
-            /*BankAccount bankAccount1 = new BankAccount(124321.32f, "Jane Doe");
+            BankAccount bankAccount1 = new BankAccount(124321.32f, "Jane Doe");
             Console.WriteLine(bankAccount1.Balance);
 
             ChildBankAccount bankAccount2 = new ChildBankAccount(1321.43f, "John Doe", "Jane Doe");
 
             Console.WriteLine(bankAccount1.AddBalance(100f));
             Console.WriteLine(bankAccount2.AddBalance(-1421.43f, true));*/
-
+            GetData();
 
             Console.ReadKey();
+        }
+        async static void GetData()
+        {
+            BankAccount bankAccount = new BankAccount(543543, "Jane");
+            Console.WriteLine("Log in");
+            var task = await bankAccount.GetData();
+            Console.WriteLine(task);
         }
     }
 

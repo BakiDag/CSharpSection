@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CSharpSection_2.Classes
 {
@@ -37,6 +39,12 @@ namespace CSharpSection_2.Classes
             if (balanceCanBeNegative) balance = balance + balanceToBeAdded;
             else Balance = balance + balanceToBeAdded;
             return Balance;
+        }
+
+        public async Task<string> GetData()
+        {
+            Thread.Sleep(5000);
+            return "Completed";
         }
     }
 
