@@ -27,12 +27,12 @@ namespace CSharpSection_2.Classes
             Balance = balance;
             this.owner = owner;
         }
-        public float AddBalance(float balanceToBeAdded) 
+        public virtual float AddBalance(float balanceToBeAdded) 
         {
             Balance = balance + balanceToBeAdded;
             return Balance;
         }
-        public float AddBalance(float balanceToBeAdded, bool balanceCanBeNegative)
+        public virtual float AddBalance(float balanceToBeAdded, bool balanceCanBeNegative)
         {
             if (balanceCanBeNegative) balance = balance + balanceToBeAdded;
             else Balance = balance + balanceToBeAdded;
@@ -47,6 +47,17 @@ namespace CSharpSection_2.Classes
         public ChildBankAccount(float balance, string owner, string parent): base (balance, owner)
         {
             Parent = parent;
+        }
+
+        public override float AddBalance(float balanceToBeAdded)
+        {
+            if(balanceToBeAdded >= 10) return base.AddBalance(balanceToBeAdded);
+            return Balance;
+        }
+        public override float AddBalance(float balanceToBeAdded, bool balanceCanBeNegative)
+        {
+            if (balanceToBeAdded >= 10) return base.AddBalance(balanceToBeAdded, balanceCanBeNegative);
+            return Balance;
         }
     }
 }
