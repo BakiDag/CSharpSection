@@ -39,4 +39,14 @@ namespace CSharpSection_2.Classes
             return Balance;
         }
     }
+
+    public class ChildBankAccount : BankAccount
+    {
+        public string Parent { get; set; }
+
+        public ChildBankAccount(float balance, string owner, string parent): base (balance, owner)
+        {
+            Parent = parent;
+        }
+    }
 }
