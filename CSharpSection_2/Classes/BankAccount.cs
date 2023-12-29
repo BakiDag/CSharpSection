@@ -32,5 +32,11 @@ namespace CSharpSection_2.Classes
             Balance = balance + balanceToBeAdded;
             return Balance;
         }
+        public float AddBalance(float balanceToBeAdded, bool balanceCanBeNegative)
+        {
+            if (balanceCanBeNegative) balance = balance + balanceToBeAdded;
+            else Balance = balance + balanceToBeAdded;
+            return Balance;
+        }
     }
 }
